@@ -5,14 +5,14 @@ provider "aws" {
   secret_key = "secret"
 }
 
-# resource "aws_instance" "my_ec2_instance" {
-#   ami           = "ami-00874d747dde814fa"
-#   instance_type = "t2.micro"
+resource "aws_instance" "my_ec2_instance" {
+  ami           = "ami-00874d747dde814fa"
+  instance_type = "t2.micro"
 
-#   tags = {
-#     Name = "ubuntu_ec2"
-#   }
-# }
+  tags = {
+    Name = "ubuntu_ec2"
+  }
+}
 
 resource "aws_subnet" "my_subnet" {
   vpc_id     = aws_vpc.my_vpc.id
